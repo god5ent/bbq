@@ -8,6 +8,7 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 gem 'email_validator'
+gem 'sass-rails'
 
 gem 'uglifier'
 
