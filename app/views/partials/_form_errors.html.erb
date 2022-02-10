@@ -1,0 +1,20 @@
+<% errors = model.errors %>
+<% if errors.any? %>
+  <div class="container alert alert-danger">
+    <div class="row">
+      <div class="col-10">
+        <h4> <%= t("errors.messages.not_saved", count: errors.count) %> </h4>
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="m-3">
+        <% errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
