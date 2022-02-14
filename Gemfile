@@ -6,12 +6,8 @@ ruby '2.7.2'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 
 gem 'devise'
-
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
-gem 'email_validator'
-gem 'sass-rails'
-
 gem 'uglifier'
 
 gem 'rails-i18n', '~> 6'
