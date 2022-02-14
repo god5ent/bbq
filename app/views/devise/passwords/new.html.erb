@@ -1,0 +1,26 @@
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-9 col-lg-7 col-xl-6 mt-5">
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5">
+            <h2 class="text-center mb-5">Восстановление пароля</h2>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+              <form>
+                <div class="form-outline mb-2">
+                  <%= f.email_field :email, placeholder: 'Ваша почта', autofocus: 'true', class: 'form-control form-control-lg' %>
+                </div>
+                <p class="text-center text-muted mt-5 mb-0">Вспомнили?
+                  <%= link_to 'Войти', new_user_session_path, class: 'fw-bold text-body' %></p>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <%= f.submit "Отправить! 🙏", class: 'btn btn-info mt-3' %>
+                </div>
+              </form>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
