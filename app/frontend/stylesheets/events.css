@@ -1,8 +1,3 @@
-/*
-(с) goodprogrammer.ru
-Наши дополнительные стили для красивого оформления плитки событий
- */
-
 .event-info {
   position: relative;
   color: white;
@@ -33,11 +28,11 @@
 }
 
 .event-description a {
-  color: #d0d0ff;
+  color: floralwhite;
 }
 
 .event-description small {
-  color: #e0e0e0;
+  color: yellow;
 }
 
 .event-info-inner {
