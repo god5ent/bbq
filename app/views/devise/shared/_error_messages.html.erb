@@ -1,19 +1,10 @@
 <% if resource.errors.any? %>
-  <div class="container alert alert-danger">
-    <div class="row">
-      <div class="col-10">
-        <h4>Внимание</h4>
-      </div>
-      <div class="col-2">
-        <button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-    </div>
-    <div class="row">
-      <ul class="m-3">
-        <% resource.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+<div class="container">
+  <div class="alert alert-danger alert-dismissible fade show">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <% resource.errors.full_messages.each do |message| %>
+      <small>⚠️ <%= message %></small><br>
+    <% end %>
   </div>
+</div>
 <% end %>

@@ -1,9 +1,6 @@
 <%= form_with(model: event) do |form| %>
-
-  <%= render partial: 'partials/form_errors', locals: {model: @event} %>
-
   <%= form_for(@event) do |error| %>
-    <%= render partial: 'partials/form_errors', locals: {model: @event} %>
+    <%= render partial: 'partials/form_errors', locals: { model: @event } %>
 
     <div class="form-group">
       <%= form.label :title %>
