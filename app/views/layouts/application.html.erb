@@ -10,11 +10,22 @@
 </head>
 <body>
 <%= render 'partials/navigation' %>
-  <div class="container">
-    <p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <div class="mt-3 w-auto">
+      <% if notice %>
+        <div class="alert alert-light alert-dismissible fade show">
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <p><%= notice %></p>
+      <% end %>
+      </div>
+    </div>
   </div>
-  <div class="container">
-    <%= yield %>
-  </div>
+</div>
+
+<div class="container">
+  <%= yield %>
+</div>
 </body>
 </html>

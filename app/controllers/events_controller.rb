@@ -14,7 +14,7 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    @event = current_user.events.build
+    @event = Event.new
   end
 
   # GET /events/1/edit
@@ -24,7 +24,6 @@ class EventsController < ApplicationController
   # POST /events
   def create
     @event = current_user.events.build(event_params)
-
     if @event.save
       redirect_to @event, notice: 'Event was successfully created.'
     else
@@ -49,12 +48,12 @@ class EventsController < ApplicationController
 
   private
 
-  def set_current_user_event
-    @event = current_user.events.find(params[:id])
-  end
-
   def set_event
     @event = Event.find(params[:id])
+  end
+
+  def set_current_user_event
+    @event = current_user.events.find(params[:id])
   end
 
   def event_params
