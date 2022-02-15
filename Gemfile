@@ -11,6 +11,7 @@ gem 'webpacker', '~> 5.0'
 gem 'uglifier'
 
 gem 'rails-i18n', '~> 6'
+gem 'devise-i18n'
 gem 'http_accept_language'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem "validate_url"
