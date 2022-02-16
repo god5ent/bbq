@@ -28,10 +28,3 @@
     </div>
   <% end %>
 <% end %>
-
-<% if event.user == current_user %>
-  <div class="actions mt-3">
-    <%= link_to 'Удалить событие', event_path(@event), method: :delete, data: {confirm: 'are u sure?'}, class: 'btn btn-danger' %>
-  </div>
-
-<% end %>

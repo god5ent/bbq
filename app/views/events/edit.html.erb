@@ -5,3 +5,7 @@
     <%= render 'form', event: @event %>
   </div>
 </div>
+
+<div class="actions mt-3">
+  <%= link_to 'Удалить событие', @event, method: :delete, data: { confirm: 'are u sure?' }, class: 'btn btn-danger' %>
+</div>
