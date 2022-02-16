@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BBQ</title>
+  <title><%= t('title') %></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -10,7 +10,6 @@
 </head>
 <body>
 <%= render 'partials/navigation' %>
-
 <div class="container">
   <div class="row">
     <div class="mt-3 w-auto">
@@ -23,7 +22,6 @@
     </div>
   </div>
 </div>
-
 <div class="container">
   <%= yield %>
 </div>

@@ -3,47 +3,40 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show]
   before_action :set_current_user_event, only: [:edit, :update, :destroy]
 
-  # GET /events
   def index
     @events = Event.all
   end
 
-  # GET /events/1
   def show
   end
 
-  # GET /events/new
   def new
     @event = current_user.events.build
   end
 
-  # GET /events/1/edit
   def edit
   end
 
-  # POST /events
   def create
     @event = current_user.events.build(event_params)
     if @event.save
-      redirect_to @event, notice: 'Event was successfully created.'
+      redirect_to @event, notice: t('.created')
     else
       render :new
     end
   end
 
-  # PATCH/PUT /events/1
   def update
     if @event.update(event_params)
-      redirect_to @event, notice: 'Event was successfully updated.'
+      redirect_to @event, notice: t('.updated')
     else
       render :edit
     end
   end
 
-  # DELETE /events/1
   def destroy
     @event.destroy
-    redirect_to events_url, notice: 'Event was successfully destroyed.'
+    redirect_to events_url, notice: t('.destroyed')
   end
 
   private

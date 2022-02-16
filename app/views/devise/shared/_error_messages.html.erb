@@ -1,6 +1,9 @@
 <% if resource.errors.any? %>
 <div class="container">
   <div class="alert alert-danger alert-dismissible fade show">
+    <div>
+  <p class="lead"><%= t('errors.messages.not_saved', count: resource.errors.count) %></p>
+    </div>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     <% resource.errors.full_messages.each do |message| %>
       <small>⚠️ <%= message %></small><br>
