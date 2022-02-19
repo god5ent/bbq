@@ -33,6 +33,7 @@ ru:
         user_name: 'Имя'
         user_email: 'Почта'
         user: 'Пользователь'
+        event: ''
 
     errors:
       models:
@@ -66,11 +67,10 @@ ru:
   subscriptions:
     create:
       created: 'Вы подписаны на это событие'
-      error: 'Подписка/отписка не сработала'
+      error: 'Нельзя подписаться на свое событие'
     destroy:
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
-    subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
   title: 'Шашлыки'
