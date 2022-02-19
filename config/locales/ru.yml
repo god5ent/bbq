@@ -12,7 +12,7 @@ ru:
 
     attributes:
       user:
-        email: 'Ваша почта'
+        email: 'Почта'
         name: 'Имя'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
@@ -24,6 +24,15 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+
+      comment:
+        body: 'Комментарий'
+        user_name: 'Имя'
+
+      subscription:
+        user_name: 'Имя'
+        user_email: 'Почта'
+        user: 'Пользователь'
 
     errors:
       models:
@@ -43,6 +52,26 @@ ru:
   users:
     update:
       updated: 'Вы обновили свой профиль'
+
+  comments:
+    destroy:
+      destroyed: 'Комментарий удален'
+      error: 'Ошибка с комментарием'
+    create:
+      created: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+
+  subscriptions:
+    create:
+      created: 'Вы подписаны на это событие'
+      error: 'Подписка/отписка не сработала'
+    destroy:
+      destroyed: 'Участник отписан'
+      error: 'Подписка/отписка не сработала'
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
   title: 'Шашлыки'
 
@@ -84,6 +113,7 @@ ru:
     create_your_account: 'Создай себе аккаунт'
     password_changer: 'Сменить пароль'
     password_recovery: 'Восстановление пароля'
+    comment: 'Комментарий'
 
   text:
     show_events: 'Пользователь пока не организовал ни одного события'
@@ -96,6 +126,10 @@ ru:
     have_an_account?: 'Уже есть аккаунт?'
     revised?: 'Передумали?'
     remember?: 'Вспомнили?'
+    they_will_go: 'Пойдут'
+    i_will_go: 'Пойду'
+    organizer: 'Зовет'
+
   placeholder:
     email: 'Email'
     name: 'Имя'
