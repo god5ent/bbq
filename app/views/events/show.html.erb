@@ -26,15 +26,15 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row  bg-info p-2 text-dark bg-opacity-10">
     <div class="col-md-8">
-      <div class="event-comments buffer-top">
+      <div class="event-comments mt-3">
         <%= render partial: 'comments/form',
                    locals: { comment: @new_comment || @event.comments.build } %>
 
-        <div class="buffer-both">
+        <div class="my-3">
           <%= render partial: 'comments/comment',
-                     collection: @event.comments.except(@new_comment) %>
+                     collection: @event.comments.except(@new_comment).reverse %>
         </div>
       </div>
     </div>
@@ -44,6 +44,7 @@
         <h4><%= t('text.organizer') %>:</h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
+      <% if @event.subscribers.present? %>
       <div class="event-subscriptions">
         <h4><%= t('text.they_will_go') %>:</h4>
         <div>
@@ -53,6 +54,8 @@
           </p>
         </div>
       </div>
+      <% end %>
+      <% unless @event.user == current_user || @event.subscribers.include?(current_user) %>
       <div class="event-subscription-form">
         <h4><%= t('text.i_will_go') %>:</h4>
         <div>
@@ -61,6 +64,7 @@
           } %>
         </div>
       </div>
+        <% end %>
     </div>
   </div>
 </div>
