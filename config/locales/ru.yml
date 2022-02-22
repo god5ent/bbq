@@ -18,6 +18,7 @@ ru:
         password_confirmation: 'Подтверждение пароля'
         current_password: 'Текущий пароль'
         remember_me: 'Запомнить меня'
+        avatar: 'Авка'
 
       event:
         title: 'Название'

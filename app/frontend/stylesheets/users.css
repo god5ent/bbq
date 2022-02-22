@@ -1,4 +1,5 @@
 .user-avatar .img-icon {
     margin-top: 2px;
     height: 30px;
+    border-radius: 50%;
 }

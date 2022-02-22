@@ -15,6 +15,8 @@ gem 'devise-i18n'
 gem 'http_accept_language'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem "validate_url"
+gem 'carrierwave'
+gem 'rmagick'
 
 group :production do
   gem 'pg'

@@ -11,6 +11,12 @@
     <%= f.text_field :email, class: 'form-control' %>
   </div>
 
+  <div class="form-group my-3">
+    <%= f.label :avatar %>
+    <p><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>
+    <%= f.file_field :avatar %>
+  </div>
+
   <div class="actions my-3">
     <%= f.submit t('buttons.save'), class: 'btn btn-primary' %>
     <%= t('text.or') %> <%= link_to t('buttons.return'), :back %>

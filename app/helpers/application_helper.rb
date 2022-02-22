@@ -1,6 +1,36 @@
 module ApplicationHelper
   def user_avatar(user)
-    asset_pack_path('media/images/user.png')
+    if user.avatar?
+      user.avatar.url
+    else
+      asset_pack_path('media/images/user.png')
+    end
+  end
+
+  def user_avatar_thumb
+    if user.avatar.file.present?
+      user.avatar.thumb.url
+    else
+      asset_pack_path('media/images/user.png')
+    end
+  end
+
+  def event_photo(event)
+    photos = event.photo.persisted
+    if photos.any?
+      photos.sample.photo.url
+    else
+      asset_pack_path('media/images/event.jpg')
+    end
+  end
+
+  def event_thumb
+    photos = event.photos.persisted
+    if photo.any?
+      photos.sample.photo.thumb.url
+    else
+      asset_pack_path('media/images/event_thumb.jpg')
+    end
   end
 
   def fa_icon(icon_class)
